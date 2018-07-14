@@ -1,6 +1,9 @@
-10
-10 10 10 10 15 18 20 15 11 10
-10
-1 5 2 9 5 5 8 4 4 3
-10
-19 9 1 4 5 8 6 11 9 7
+4
+Quico PAR Chiquinha IMPAR
+9 7
+Dami PAR Marcus IMPAR
+12 3
+Dayran PAR Conrado IMPAR
+3 1000000000
+Popis PAR Chaves IMPAR
+2 7

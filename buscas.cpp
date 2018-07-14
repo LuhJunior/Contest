@@ -33,6 +33,20 @@ void elevar(int &T){
 }
 
 int main() {
-
+    vector<int> v = {1, 8, 6, 7, 50, 10, 30, 45, 78, 2, 1, 2, 2, 2, 1, 5, 5, 5, 6};
+    for(v.size()) cout<<v[i]<<" ";
+    c("");
+    sort(v);
+    for(v.size()) cout<<v[i]<< " ";
+    c("");
+    auto i = lb(v, 7);
+    c("Sete na posicao: "<<i-v.begin());
+    i = ub(v, 7);
+    c("Depois do Sete vem : "<<*i);
+    auto j = er(v, 2);
+    c("dois comeca em: "<<(j.first-v.begin())<<" e Termina em: "<<(j.second-v.begin()));
+    fea(v, elevar);
+    c("vetor ao quadrado");
+    for(v.size()) cout<<v[i]<<" ";
 	return 0;
 }
