@@ -36,7 +36,20 @@
 
 using namespace std;
 
-int main() {
+bool f2(int v){return (!(v%2));};
+bool f3(int v){return (!(v%3));};
+bool f4(int v){return (!(v%4));};
+bool f5(int v){return (!(v%5));};
 
+int main() {
+    int n;
+    vector<int> v;
+    cin>>n;
+    v.resize(n);
+    fort(n) cin>>v[i];
+    c(cifs(v, f2)<< " Multiplo(s) de 2");
+    c(cifs(v, f3)<< " Multiplo(s) de 3");
+    c(cifs(v, f4)<< " Multiplo(s) de 4");
+    c(cifs(v, f5)<< " Multiplo(s) de 5");
 	return 0;
 }

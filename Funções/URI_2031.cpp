@@ -36,7 +36,24 @@
 
 using namespace std;
 
-int main() {
+int g(string s, string s1){
+    if(s == s1){
+        if(s == "papel") return 2;
+        else if(s == "pedra") return 3;
+        else return 4;
+    }
+    else if(s == "ataque" || s1 == "ataque") return s1=="ataque";
+    else if(s == "papel" || s1 == "papel") return s == "papel";
+}
 
+int main() {
+    int n;
+    string s, s1;
+    char m[][30] = {"Jogador 1 venceu", "Jogador 2 venceu", "Ambos venceram", "Sem ganhador", "Aniquilacao mutua"};
+    cin>>n;
+    fort(n){
+        cin>>s>>s1;
+        c(m[g(s, s1)]);
+    }
 	return 0;
 }

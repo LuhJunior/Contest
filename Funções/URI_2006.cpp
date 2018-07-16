@@ -1,9 +1,10 @@
 #include <bits/stdc++.h>
 #define lli long long int
-#define fort(x) for(int i=0; i<x; i++)
+#define for(x) for(int i=0; i<x; i++)
 #define forj(x) for(int j=0; j<x; j++)
 #define forq(Q) for(int i=0; Q; i++)
 #define form(x,y) for(int i=0; i<x; i++) for(int j=0; j<y; j++)
+#define fort(x,y) for(int i=x; i<y; i++)
 #define WHILE(n,x) while((n--)&&cin>>x)
 #define M(x, y) max(x, y)
 #define m(x, y) min(x, y)
@@ -14,7 +15,6 @@
 #define pf pop_front
 ///*Arrumar
 #define sort(I) sort(I.begin(), I.end())
-#define rev(I) reverse(I.begin(), I.end())
 ///*Buscar
 #define mine(I) min_element(I.begin(), I.end())
 #define maxe(I) max_element(I.begin(), I.end())
@@ -33,10 +33,13 @@
 #define cifs(I, f) count_if(I.begin(), I.end(), f)
 #define cif(begin, end, f) count_if(begin, end, f)
 #define count(I, T) count(I.begin(), I.end(), T)
-
 using namespace std;
 
 int main() {
-
+    int t;
+    cin>>t;
+    vector<int> v(5, 0);
+    for(5) cin>>v[i];
+    c(count(v, t));
 	return 0;
 }

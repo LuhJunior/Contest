@@ -37,6 +37,12 @@
 using namespace std;
 
 int main() {
-
+    int a, b, c, d, e;
+    char s[][30] = {"Jogador 1 ganha!","Jogador 2 ganha!"};
+    cin>>a>>b>>c>>d>>e;
+    if(((b+c)%2 == a)){
+        c(s[!d^e]);
+    }
+    else c(s[d&&e]);
 	return 0;
 }

@@ -1,9 +1,10 @@
 #include <bits/stdc++.h>
 #define lli long long int
-#define fort(x) for(int i=0; i<x; i++)
+#define for(x) for(int i=0; i<x; i++)
 #define forj(x) for(int j=0; j<x; j++)
 #define forq(Q) for(int i=0; Q; i++)
 #define form(x,y) for(int i=0; i<x; i++) for(int j=0; j<y; j++)
+#define fort(x,y) for(int i=x; i<y; i++)
 #define WHILE(n,x) while((n--)&&cin>>x)
 #define M(x, y) max(x, y)
 #define m(x, y) min(x, y)
@@ -14,13 +15,11 @@
 #define pf pop_front
 ///*Arrumar
 #define sort(I) sort(I.begin(), I.end())
-#define rev(I) reverse(I.begin(), I.end())
 ///*Buscar
 #define mine(I) min_element(I.begin(), I.end())
 #define maxe(I) max_element(I.begin(), I.end())
-#define maxef(I, f) max_element(I.begin(), I.end(), f)
 #define fe(begin, end, funcao) for_each(begin, end, funcao)
-#define fea(I, f) for_each(I.begin(), I.end(), f)
+#define fes(I, f) for_each(I.begin(), I.end(), f)
 #define fd(I, T) find(I.begin(), I.end(), T)
 #define bs(I, T) binary_search(I.begin(), I.end(), T) ///*faz uma buscar binaria e retorna se o elemento está ou não
 #define er(I, T) equal_range(I.begin(), I.end(), T) ///*um par de iterators um para o inicio do range que é igual ao valor e outro para o fim
@@ -32,11 +31,19 @@
 #define acc(begin, end, T) accumulate(begin, end, T)
 #define cifs(I, f) count_if(I.begin(), I.end(), f)
 #define cif(begin, end, f) count_if(begin, end, f)
-#define count(I, T) count(I.begin(), I.end(), T)
-
 using namespace std;
-
+int j;
+bool f2(int v){return v+j>j||v+j<-j;}
+void f(int& v){v-=j;}
 int main() {
-
+    int n;
+    vector<int> v;
+    cin >>j>>n;
+    v.resize(n);
+    for(n) cin>>v[i];
+    ads(v);
+    fes(v, f);
+    if(cif(v.begin()+1, v.end(), f2)>0) c("GAME OVER");
+    else c("YOU WIN");
 	return 0;
 }

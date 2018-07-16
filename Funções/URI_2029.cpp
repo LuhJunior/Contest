@@ -37,6 +37,11 @@
 using namespace std;
 
 int main() {
-
+    double v, d, pi=3.14;
+    while(cin>>v>>d){
+        d = d/2;
+        printf("ALTURA = %.2lf\n", v/(pi*pow(d, 2)));
+        printf("AREA = %.2lf\n", pi*pow(d, 2));
+    }
 	return 0;
 }

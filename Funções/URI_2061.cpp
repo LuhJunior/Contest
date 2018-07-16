@@ -37,6 +37,14 @@
 using namespace std;
 
 int main() {
-
+    int n, m;
+    string s;
+    cin>>n>>m;
+    fort(m){
+        cin >>s;
+        if(s == "fechou") n++;
+        else n--;
+    }
+    c(n);
 	return 0;
 }

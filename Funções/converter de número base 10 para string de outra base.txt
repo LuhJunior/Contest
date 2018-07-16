@@ -1,0 +1,20 @@
+string ntos(int v, int base){
+    char buffer[100];
+    string s;
+    if(base == 2){
+        itoa(v, buffer, 2);
+        s = buffer;
+    }
+    else if(base == 8){
+        itoa(v, buffer, 8);
+        s = buffer;
+    }
+    else if(base == 16){
+        sprintf(buffer, "%X", v);
+        s = buffer;
+    }
+    else{
+        s = to_string(v);
+    }
+    return s;
+}

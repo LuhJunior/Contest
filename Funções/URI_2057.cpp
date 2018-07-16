@@ -37,6 +37,9 @@
 using namespace std;
 
 int main() {
-
+    int a, b, c;
+    cin>>a>>b>>c;
+    a = a+b+c;
+    c((a>=24?a-24:(a>=0?a:24+a)));
 	return 0;
 }

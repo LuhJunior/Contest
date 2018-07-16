@@ -1,0 +1,15 @@
+vector<string> split(string s, char t){
+    vector<string> v;
+    while(!s.empty()){
+        size_t p = s.find(t);
+        if(p != -1){
+            v.push_back(s.substr(0, p));
+            s.erase(s.begin(), s.begin()+p+1);
+        }
+        else{
+            v.push_back(s);
+            s.clear();
+        }
+    }
+    return v;
+}
