@@ -47,7 +47,15 @@
 
 using namespace std;
 
-int main() {
+double f(int n){
+    if(n == 0) return 0;
+    else if(n == 1) return (double)1.0/(double)6.0;
+    return 1/(6+f(n-1));
+}
 
-	return 0;
+int main() {
+    int n;
+    cin>>n;
+    printf("%.10f\n", 3+f(n));
+    return 0;
 }

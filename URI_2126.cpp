@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
 #define lli long long int
-#define fori(x) for(int i=0; i<x; i++)
+#define fort(x) for(int i=0; i<x; i++)
 #define forj(x) for(int j=0; j<x; j++)
 #define forq(Q) for(int i=0; Q; i++)
-#define form(x, y) for(int i=0; i<x; i++) for(int j=0; j<y; j++)
-#define whilen(n, x) while((n--)&&cin>>x)
+#define form(x,y) for(int i=0; i<x; i++) for(int j=0; j<y; j++)
+#define WHILE(n,x) while((n--)&&cin>>x)
 #define M(x, y) max(x, y)
 #define m(x, y) min(x, y)
 #define c(x) cout<<x<<endl
@@ -13,7 +13,6 @@
 #define pb push_back
 #define pf pop_front
 #define ss substr
-#define ts to_string
 ///*Arrumar
 #define sort(I) sort(I.begin(), I.end())
 #define rev(I) reverse(I.begin(), I.end())
@@ -44,10 +43,24 @@
 #define pssf(I, I2, f) partial_sum(I.begin(), I.end(), I2.begin(), f)
 #define ps(begin, end, I) partial_sum(begin, end, I.begin())
 #define psf(begin, end, I, f) partial_sum(begin, end, I.begin(), f)
-
 using namespace std;
 
 int main() {
-
+    string s, s1;
+    int c=1;
+    while(cin>>s>>s1){
+        int n = 0, p = 0;
+        while(!s1.empty()){
+            auto i = s1.find(s);
+            if(i == -1) break;
+            else{
+                p = i;
+                s1.erase(i, s.size());
+                n++;
+            }
+        }
+        if(n == 0) c("Caso #"<<c++<<":"<<"\nNao existe subsequencia\n");
+        else c("Caso #"<<c++<<":"<<"\nQtd.Subsequencias: "<<n<<"\nPos: "<<(n-1)*s.size()+p+1<<'\n');
+    }
 	return 0;
 }

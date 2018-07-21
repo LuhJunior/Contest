@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #define lli long long int
-#define fori(x) for(int i=0; i<x; i++)
+#define fort(x) for(int i=0; i<x; i++)
 #define forj(x) for(int j=0; j<x; j++)
 #define forq(Q) for(int i=0; Q; i++)
 #define form(x, y) for(int i=0; i<x; i++) for(int j=0; j<y; j++)
@@ -44,10 +44,23 @@
 #define pssf(I, I2, f) partial_sum(I.begin(), I.end(), I2.begin(), f)
 #define ps(begin, end, I) partial_sum(begin, end, I.begin())
 #define psf(begin, end, I, f) partial_sum(begin, end, I.begin(), f)
-
 using namespace std;
 
 int main() {
-
+    string s;
+    char s2[][40] = {"fechou!", "abriu!"};
+    int n;
+    cin>>n;
+    fort(n){
+        int h, m, b;
+        cin>>h>>m>>b;
+        if(h<10) s.pb('0');
+        s += ts(h);
+        s += ':';
+        if(m<10) s.pb('0');
+        s += ts(m);
+        c(s<<" - A porta "<< s2[b]);
+        s.clear();
+    }
 	return 0;
 }

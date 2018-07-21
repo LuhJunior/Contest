@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #define lli long long int
-#define fori(x) for(int i=0; i<x; i++)
+#define fort(x) for(int i=0; i<x; i++)
 #define forj(x) for(int j=0; j<x; j++)
 #define forq(Q) for(int i=0; Q; i++)
 #define form(x, y) for(int i=0; i<x; i++) for(int j=0; j<y; j++)
@@ -13,7 +13,6 @@
 #define pb push_back
 #define pf pop_front
 #define ss substr
-#define ts to_string
 ///*Arrumar
 #define sort(I) sort(I.begin(), I.end())
 #define rev(I) reverse(I.begin(), I.end())
@@ -44,10 +43,15 @@
 #define pssf(I, I2, f) partial_sum(I.begin(), I.end(), I2.begin(), f)
 #define ps(begin, end, I) partial_sum(begin, end, I.begin())
 #define psf(begin, end, I, f) partial_sum(begin, end, I.begin(), f)
-
 using namespace std;
 
 int main() {
-
+    int n, p;
+    while(cin>>n && n != 0){
+        fort(n){
+            cin>>p;
+            c(2*p-1-!(p%2));
+        }
+    }
 	return 0;
 }

@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
 #define lli long long int
-#define fori(x) for(int i=0; i<x; i++)
+#define fort(x) for(int i=0; i<x; i++)
 #define forj(x) for(int j=0; j<x; j++)
 #define forq(Q) for(int i=0; Q; i++)
-#define form(x, y) for(int i=0; i<x; i++) for(int j=0; j<y; j++)
-#define whilen(n, x) while((n--)&&cin>>x)
+#define form(x,y) for(int i=0; i<x; i++) for(int j=0; j<y; j++)
+#define whilen(n,x) while((n--)&&cin>>x)
 #define M(x, y) max(x, y)
 #define m(x, y) min(x, y)
 #define c(x) cout<<x<<endl
@@ -12,8 +12,6 @@
 #define pqueue priority_queue
 #define pb push_back
 #define pf pop_front
-#define ss substr
-#define ts to_string
 ///*Arrumar
 #define sort(I) sort(I.begin(), I.end())
 #define rev(I) reverse(I.begin(), I.end())
@@ -44,10 +42,27 @@
 #define pssf(I, I2, f) partial_sum(I.begin(), I.end(), I2.begin(), f)
 #define ps(begin, end, I) partial_sum(begin, end, I.begin())
 #define psf(begin, end, I, f) partial_sum(begin, end, I.begin(), f)
-
 using namespace std;
 
 int main() {
-
+    int m[13], a, b;
+    m[0] = 0;
+    m[1] = 31;
+    m[2] = m[1]+29;
+    m[3] = m[2]+31;
+    m[4] = m[3]+30;
+    m[5] = m[4]+31;
+    m[6] = m[5]+30;
+    m[7] = m[6]+31;
+    m[8] = m[7]+31;
+    m[9] = m[8]+30;
+    m[10] = m[9]+31;
+    m[12] = m[11] = m[10]+30;
+    while(cin>>a>>b){
+        if(a==12 && b==24) c("E vespera de natal!");
+        else if(a==12 && b==25) c("E natal!");
+        else if(a==12 && b>25) c("Ja passou!");
+        else c("Faltam "<<360-(m[a-1]+b)<<" dias para o natal!");
+    }
 	return 0;
 }

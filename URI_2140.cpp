@@ -48,6 +48,35 @@
 using namespace std;
 
 int main() {
-
+    int a, b;
+    while(cin>>a>>b && a+b != 0){
+        int d = M(a, b) - m(a, b);
+        if(d>100){
+            d-=100;
+            if(d == 50 || d == 20 || d == 10 || d == 5 || d == 2) c("possible");
+            else c("impossible");
+        }
+        else if(d>50){
+            d-=50;
+            if(d == 20 || d == 10 || d == 5 || d == 2) c("possible");
+            else c("impossible");
+        }
+        else if(d>20){
+            d-=20;
+            if(d == 10 || d == 5 || d == 2) c("possible");
+            else c("impossible");
+        }
+        else if(d>10){
+            d-=10;
+            if(d == 5 || d == 2) c("possible");
+            else c("impossible");
+        }
+        else if(d>5){
+            d-=5;
+            if(d == 2) c("possible");
+            else c("impossible");
+        }
+        else c("impossible");
+    }
 	return 0;
 }
