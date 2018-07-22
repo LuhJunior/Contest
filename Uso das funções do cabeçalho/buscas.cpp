@@ -21,10 +21,10 @@
 #define fe(begin, end, funcao) for_each(begin, end, funcao)
 #define fea(I, f) for_each(I.begin(), I.end(), f)
 #define fd(I, T) find(I.begin(), I.end(), T)
-#define bs(I, T) binary_search(I.begin(), I.end(), T) ///*faz uma buscar binaria e retorna se o elemento está ou não
-#define er(I, T) equal_range(I.begin(), I.end(), T) ///*um par de iterators um para o inicio do range que é igual ao valor e outro para o fim
-#define lb(I, T) lower_bound(I.begin(), I.end(), T) ///*primeiro elemento que não é menor que o valor T se todos forem menores retorna o ultimo
-#define ub(I, T) upper_bound(I.begin(), I.end(), T) ///*primeiro elemento maior que o valor T se todos forem menores retorna o ultimo
+#define bs(I, T) binary_search(I.begin(), I.end(), T) ///faz uma buscar binaria e retorna se o elemento está ou não
+#define er(I, T) equal_range(I.begin(), I.end(), T) ///um par de iterators um para o inicio do range que é igual ao valor e outro para o fim
+#define lb(I, T) lower_bound(I.begin(), I.end(), T) ///primeiro elemento que não é menor que o valor T se todos forem menores retorna o ultimo
+#define ub(I, T) upper_bound(I.begin(), I.end(), T) ///primeiro elemento maior que o valor T se todos forem menores retorna o ultimo
 
 using namespace std;
 

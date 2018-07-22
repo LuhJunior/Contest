@@ -48,6 +48,16 @@
 using namespace std;
 
 int main() {
-
+    int n, a, b;
+    cin>>n>>a;
+    fori(n-1){
+        cin>>b;
+        if(b<a){
+            c(i+2);
+            return 0;
+        }
+        a = b;
+    }
+    c(0);
 	return 0;
 }

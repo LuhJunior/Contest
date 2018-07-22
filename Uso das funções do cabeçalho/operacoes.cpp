@@ -30,24 +30,40 @@
 #define ub(I, T) upper_bound(I.begin(), I.end(), T) ///*primeiro elemento maior que o valor T se todos forem menores retorna o ultimo
 ///* Operações em vetores
 #define ads(I) adjacent_difference(I.begin(), I.end(), I.begin())
-#define ad(begin, end, I) adjacent_difference(begin, end, I)
+#define ada(I, I2) adjacent_difference(I.begin(), I.end(), I2.begin())
+#define ad(begin, end, I) adjacent_difference(begin, end, I.begin())
 #define accs(I, T) accumulate(I.begin(), I.end(), T)
 #define acc(begin, end, T) accumulate(begin, end, T)
 #define cifs(I, f) count_if(I.begin(), I.end(), f)
 #define cif(begin, end, f) count_if(begin, end, f)
 #define count(I, T) count(I.begin(), I.end(), T)
-#define ips(I, I2, T) inner_product(I.begin(), I.end(), I2.begin, T)
-#define ipsf(I, I2, T, f) inner_product(I.begin(), I.end(), I2.begin, T, f)
-#define ip(begin, end, I, T) inner_product(begin, end, I.begin(), T)
-#define ipf(begin, end, I, T, f) inner_product(begin, end, I.begin(), T, f)
-#define pss(I, I2) partial_sum(I.begin(), I.end(), I2.begin())
-#define pssf(I, I2, f) partial_sum(I.begin(), I.end(), I2.begin(), f)
+#define ipa(I, I2) inner_product(I.begin(), I.end(), I2.begin(), 0)
+#define ip(begin, end, I) inner_product(begin, end, I.begin(), 0)
+#define ipf(begin, end, I, f) inner_product(begin, end, I.begin(), 0, f)
+#define psa(I, I2) partial_sum(I.begin(), I.end(), I2.begin())
+#define psaf(I, I2, f) partial_sum(I.begin(), I.end(), I2.begin(), f)
 #define ps(begin, end, I) partial_sum(begin, end, I.begin())
 #define psf(begin, end, I, f) partial_sum(begin, end, I.begin(), f)
 
 using namespace std;
 
-int main() {
+void sv(vector<int> v){
+    fori(v.size()) cout<<v[i]<<" ";
+    c("");
+}
 
+int main() {
+    vector<int> v = {1, 8, 6, 7, 50, 10, 30, 45, 78, 2, 1, 2, 2, 2, 1, 5, 5, 5, 6};
+    vector<int> v2 = {1, 8, 6, 7, 50, 10, 30, 45, 78, 2, 1, 2, 2, 2, 1, 5, 5, 5, 6};
+    vector<int> r(v.size(), 0);
+    c("quantidade de 2: "<<count(v, 2));
+    c("soma: "<<accs(v, 0));
+    ada(v, r);/// r[i] = v[i]-v[i-1];
+    c("adjacent_difference: r[i] = v[i]-v[i-1]");
+    sv(r);
+    psa(v, r);/// r[i] = v[i]+v[i-1]+ ... + v[0];
+    c("partial_sum:  r[i] = v[i]+v[i-1]+ ... + v[0]");
+    sv(r);
+    c("soma dos produtos: "<< ipa(v, v2)); /// v += v[i] * v2[i];
 	return 0;
 }

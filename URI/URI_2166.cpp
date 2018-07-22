@@ -3,7 +3,7 @@
 #define fori(x) for(int i=0; i<x; i++)
 #define forj(x) for(int j=0; j<x; j++)
 #define forq(Q) for(int i=0; Q; i++)
-#define form(n, m) for(int i=0; i<n; i++) for(int j=0; j<m; j++)
+#define form(x, y) for(int i=0; i<x; i++) for(int j=0; j<y; j++)
 #define whilen(n, x) while((n--)&&cin>>x)
 #define M(x, y) max(x, y)
 #define m(x, y) min(x, y)
@@ -47,7 +47,15 @@
 
 using namespace std;
 
-int main() {
+double f(int n){
+    if(n == 0) return 0;
+    else if(n == 1) return (double)1.0/(double)2.0;
+    return 1/(2+f(n-1));
+}
 
-	return 0;
+int main() {
+    int n;
+    cin>>n;
+    printf("%.10f\n", 1+f(n));
+    return 0;
 }

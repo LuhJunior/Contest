@@ -48,6 +48,9 @@
 using namespace std;
 
 int main() {
-
+    string s;
+    cin>>s;
+    if(count(s, '1')%2) c(s<<'1');
+    else c(s<<'0');
 	return 0;
 }

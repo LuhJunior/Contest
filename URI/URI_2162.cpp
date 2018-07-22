@@ -3,7 +3,7 @@
 #define fori(x) for(int i=0; i<x; i++)
 #define forj(x) for(int j=0; j<x; j++)
 #define forq(Q) for(int i=0; Q; i++)
-#define form(n, m) for(int i=0; i<n; i++) for(int j=0; j<m; j++)
+#define form(x, y) for(int i=0; i<x; i++) for(int j=0; j<y; j++)
 #define whilen(n, x) while((n--)&&cin>>x)
 #define M(x, y) max(x, y)
 #define m(x, y) min(x, y)
@@ -48,6 +48,38 @@
 using namespace std;
 
 int main() {
-
+    int n, a, x;
+    bool b = false;
+    cin>>n>>a>>x;
+    if(a<x) b = true;
+    if(a == x){
+        c(0);
+        return 0;
+    }
+    a = x;
+    fori(n-2){
+        cin>>x;
+        if(b){
+            if(x>=a){
+                c(0);
+                return 0;
+            }
+            else{
+                b = false;
+                a = x;
+            }
+        }
+        else{
+            if(x<=a){
+                c(0);
+                return 0;
+            }
+            else{
+                b = true;
+                a = x;
+            }
+        }
+    }
+    c(1);
 	return 0;
 }

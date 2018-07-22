@@ -48,6 +48,9 @@
 using namespace std;
 
 int main() {
-
+    lli a, b;
+    while(cin>>a>>b && a+b != 0){
+        c(a*b);
+    }
 	return 0;
 }

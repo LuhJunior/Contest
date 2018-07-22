@@ -48,6 +48,10 @@
 using namespace std;
 
 int main() {
-
+    int x[2], y[2], v, r[2];
+    while(cin>>x[0]>>y[0]>>x[1]>>y[1]>>v>>r[0]>>r[1]){
+        if(sqrt(pow(x[0]-x[1], 2)+pow(y[0]-y[1], 2))+v*1.5>r[0]+r[1]) c('N');
+        else c('Y');
+    }
 	return 0;
 }

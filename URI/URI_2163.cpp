@@ -48,6 +48,21 @@
 using namespace std;
 
 int main() {
-
+    int n, m, t;
+    cin>>n>>m;
+    vector<vector<int>> v(n, vector<int>(m, 0));
+    form(n, m) cin>>v[i][j];
+    for(int i=1; i<n-1; i++){
+        auto it = find(v[i].begin()+1, v[i].end(), 42);
+        while(it != v[i].end()){
+            t = it-v[i].begin();
+            if(*(it-1) == 7 && *(it+1) == 7 && *(v[i+1].begin()+t) == 7 && *(v[i-1].begin()+t) == 7 && *(v[i-1].begin()+t-1) == 7 && *(v[i-1].begin()+t+1) == 7 && *(v[i+1].begin()+t-1) == 7 && *(v[i+1].begin()+t+1) == 7){
+                c(i+1<<" "<<it-v[i].begin()+1);
+                return 0;
+            }
+            it = find(it+1, v[i].end(), 42);
+        }
+    }
+    c("0 0");
 	return 0;
 }

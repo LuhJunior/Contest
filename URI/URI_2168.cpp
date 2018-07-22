@@ -48,6 +48,16 @@
 using namespace std;
 
 int main() {
-
+    int n;
+    cin>>n;
+    vector<vector<int>> v(n+1, vector<int>(n+1, 0));
+    form(n+1, n+1) cin>>v[i][j];
+    fori(n){
+        forj(n){
+            if(v[i][j]+v[i+1][j]+v[i][j+1]+v[i+1][j+1]>1) cout<<"S";
+            else cout<<"U";
+        }
+        c("");
+    }
 	return 0;
 }

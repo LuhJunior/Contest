@@ -48,6 +48,9 @@
 using namespace std;
 
 int main() {
-
+    string s;
+    getline(cin, s);
+    if(s.size()>140) c("MUTE");
+    else c("TWEET");
 	return 0;
 }
