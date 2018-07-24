@@ -52,6 +52,20 @@
 using namespace std;
 
 int main() {
-
+    int n;
+    int s = 0, b = 0, a = 0, ss = 0, sb = 0, sa = 0;
+    cin>>n;
+    fori(n){
+        string lixo;
+        cin>>lixo;
+        int s1, b1, a1;
+        cin>>s1>>b1>>a1;
+        s += s1; b += b1; a += a1;
+        cin>>s1>>b1>>a1;
+        ss += s1; sb += b1; sa += a1;
+    }
+    printf("Pontos de Saque: %.2f %%.\n", (double)ss*100/s);
+    printf("Pontos de Bloqueio: %.2f %%.\n", (double)sb*100/b);
+    printf("Pontos de Ataque: %.2f %%.\n", (double)sa*100/a);
 	return 0;
 }

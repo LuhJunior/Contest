@@ -52,6 +52,15 @@
 using namespace std;
 
 int main() {
-
+    int a, b, c;
+    cin>>a>>b>>c;
+    if(a<b+c && b<a+c && c<b+a){
+        if(a == b && b == c) c("Valido-Equilatero");
+        else if(a == b || a == c || c == b) c("Valido-Isoceles");
+        else c("Valido-Escaleno");
+        if(a*a == b*b + c*c || b*b == a*a + c*c || c*c == a*a + b*b) c("Retangulo: S");
+        else c("Retangulo: N");
+    }
+    else c("Invalido");
 	return 0;
 }

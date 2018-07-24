@@ -51,7 +51,39 @@
 
 using namespace std;
 
-int main() {
+int ope(int op, string s1, string s2){
+    int n = 0;
+    if(op == 1){
+        fori(60) if(s1[i] == '1' && s2[i] == '1') n++;
+    }
+    else{
+        fori(60) if(s1[i] == '1' || s2[i] == '1') n++;
+    }
+    return n;
+}
 
+int main() {
+    int n;
+    cin>>n;
+    forj(n){
+        int n2, n3;
+        cin>>n2;
+        vector<string> v(n2, string(60, '0'));
+        fori(n2){
+            int a;
+            cin>>a;
+            for(int k=0; k<a; k++){
+                int w;
+                cin>>w;
+                v[i][w-1] = '1';
+            }
+        }
+        cin>>n3;
+        fori(n3){
+            int a, b, c;
+            cin>>a>>b>>c;
+            c( ope(a, v[b-1], v[c-1]));
+        }
+    }
 	return 0;
 }

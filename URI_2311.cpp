@@ -31,7 +31,7 @@
 ///* Operações em vetores
 #define ads(I) adjacent_difference(I.begin(), I.end(), I.begin())
 #define ad(Begin, End, I) adjacent_difference(Begin, End, I.begin())
-#define accs(I, T) accumulate(I.begin(), I.end(), T)
+#define accs(I) accumulate(I.begin(), I.end(), 0.0)
 #define acc(begin, end, T) accumulate(begin, end, T)
 #define cifs(I, f) count_if(I.begin(), I.end(), f)
 #define cif(begin, end, f) count_if(begin, end, f)
@@ -52,6 +52,18 @@
 using namespace std;
 
 int main() {
-
+    int n;
+    cin>>n;
+    fori(n){
+        string s;
+        cin>>s;
+        vector<float> v(7, 0.0);
+        float f;
+        cin>>f;
+        forj(7) cin>>v[j];
+        v.erase(maxe(v));v.erase(mine(v));
+        cout<<s;
+        printf(" %.2f\n", accs(v)*f);
+    }
 	return 0;
 }

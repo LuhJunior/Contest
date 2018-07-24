@@ -17,6 +17,7 @@
 ///*Arrumar
 #define sort(I) sort(I.begin(), I.end())
 #define rev(I) reverse(I.begin(), I.end())
+#define cp(Begin, End, I) copy(Begin, End, I.begin())
 ///*Buscar
 #define mine(I) min_element(I.begin(), I.end())
 #define maxe(I) max_element(I.begin(), I.end())
@@ -51,7 +52,59 @@
 
 using namespace std;
 
-int main() {
+string t(string s){
+    string r, temp, temp2;
+    while(!s.empty()){
+        int m = s.find(".......");
+        if(m == -1) m = s.size();
+        temp = string(s.begin(), s.begin() + m);
+        if(temp != s) s.erase(s.begin(), s.begin() + temp.size() + 7);
+        else s.clear();
+        while(!temp.empty()){
+            m = temp.find("...");
+            if(m == -1) m = temp.size();
+            temp2 = string(temp.begin(), temp.begin() + m);
+            if(temp2 != temp) temp.erase(temp.begin(), temp.begin() + temp2.size() + 3);
+            else temp.clear();
+            if(temp2 == "=.===") r.pb('a');
+            else if(temp2 == "===.=.=.=") r.pb('b');
+            else if(temp2 == "===.=.===.=") r.pb('c');
+            else if(temp2 == "===.=.=") r.pb('d');
+            else if(temp2 == "=") r.pb('e');
+            else if(temp2 == "=.=.===.=") r.pb('f');
+            else if(temp2 == "===.===.=") r.pb('g');
+            else if(temp2 == "=.=.=.=") r.pb('h');
+            else if(temp2 == "=.=") r.pb('i');
+            else if(temp2 == "=.===.===.===") r.pb('j');
+            else if(temp2 == "===.=.===") r.pb('k');
+            else if(temp2 == "=.===.=.=") r.pb('l');
+            else if(temp2 == "===.===") r.pb('m');
+            else if(temp2 == "===.=") r.pb('n');
+            else if(temp2 == "===.===.===") r.pb('o');
+            else if(temp2 == "=.===.===.=") r.pb('p');
+            else if(temp2 == "===.===.=.===") r.pb('q');
+            else if(temp2 == "=.===.=") r.pb('r');
+            else if(temp2 == "=.=.=") r.pb('s');
+            else if(temp2 == "===") r.pb('t');
+            else if(temp2 == "=.=.===") r.pb('u');
+            else if(temp2 == "=.=.=.===") r.pb('v');
+            else if(temp2 == "=.===.===") r.pb('w');
+            else if(temp2 == "===.=.=.===") r.pb('x');
+            else if(temp2 == "===.=.===.===") r.pb('y');
+            else if(temp2 == "===.===.=.=") r.pb('z');
+        }
+        if(!s.empty()) r.pb(' ');
+    }
+    return r;
+}
 
+int main() {
+    int n;
+    cin>>n;
+    fori(n){
+        string s;
+        cin>>s;
+        c(t(s));
+    }
 	return 0;
 }

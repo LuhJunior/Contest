@@ -52,6 +52,10 @@
 using namespace std;
 
 int main() {
-
+    int n;
+    cin>>n;
+    cout<<"Feliz nat";
+    fori(n) cout<<'a';
+    c("l!");
 	return 0;
 }

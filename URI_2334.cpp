@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#define intm intmax_t //strtoimax
 #define lli long long int
 #define fori(x) for(int i=0; i<x; i++)
 #define forj(x) for(int j=0; j<x; j++)
@@ -52,6 +53,20 @@
 using namespace std;
 
 int main() {
+    unsigned lli x;
+    //char s[100];
+    string s;
+    while(1){
+        //fgets(s, 80, stdin);
+        //if(s[0] == '-') break;
+        //x = strtoimax(s, NULL, 10);
+        //printf("%" PRIdMAX "\n", x);
+        //c(x-1*(x != 0));
+        getline(cin, s);
+        if(s == "-1") break;
+        x = stoull(s, nullptr, 10);
+        c(x-1*(x != 0));
+    }
 
 	return 0;
 }

@@ -30,7 +30,7 @@
 #define ub(I, T) upper_bound(I.begin(), I.end(), T) ///*primeiro elemento maior que o valor T se todos forem menores retorna o ultimo
 ///* Operações em vetores
 #define ads(I) adjacent_difference(I.begin(), I.end(), I.begin())
-#define ad(Begin, End, I) adjacent_difference(Begin, End, I.begin())
+#define ad(begin, end, I) adjacent_difference(begin, end, I)
 #define accs(I, T) accumulate(I.begin(), I.end(), T)
 #define acc(begin, end, T) accumulate(begin, end, T)
 #define cifs(I, f) count_if(I.begin(), I.end(), f)
@@ -44,14 +44,19 @@
 #define pssf(I, I2, f) partial_sum(I.begin(), I.end(), I2.begin(), f)
 #define ps(begin, end, I) partial_sum(begin, end, I.begin())
 #define psf(begin, end, I, f) partial_sum(begin, end, I.begin(), f)
-#define su(I, I2, I3) set_union(I.begin(), I.end(), I2.begin(), I2.end(), I3.begin())
-#define si(I, I2, I3) set_intersection(I.begin(), I.end(), I2.begin(), I2.end(), I3.begin())
-#define unqs(I) unique(I.begin(), I.end())
-#define unq(Begin, End) unique(Begin, End)
 
 using namespace std;
 
 int main() {
-
+    char m[][10] = {"Dabriel", "Empate", "Guarte"};
+    int n, b;
+    cin>>n;
+    fori(n){
+        cin>>b;
+        int x[2], y[2], z[2];
+        cin>>x[0]>>y[0]>>z[0]>>x[1]>>y[1]>>z[1];
+        int v1 = (x[0]+y[0])/2+(b*!(z[0]%2)), v2 = (x[1]+y[1])/2+(b*!(z[1]%2));
+        c(m[(v1 == v2) + 2*(v2>v1)]);
+    }
 	return 0;
 }
