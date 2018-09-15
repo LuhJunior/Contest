@@ -1,0 +1,19 @@
+#define num_moedas 7
+#define valor_max 1000
+#define inf 9999999
+vector<int> s = {1, 2, 5, 10, 20, 50, 100};
+int mem[num_moedas+1][valor_max+1]; // mem[n][v>0] = inf; mem[n][0] = 0
+
+int moeda(int i, int val){
+    if(val<0) return inf;
+    if(mem[i][val] == -1){
+        mem[i][val] = m(1 + moeda(i, val-s[i]), moeda(i+1, val));
+    }
+    return mem[i][val];
+}
+
+void iniciar(){
+    form(num_moedas, valor_max) mem[i][j] = -1;
+    for(int i=0; i<valor_max; i++) mem[num_moedas][i] = inf;
+    for(int i=0; i<num_moedas; i++) mem[i][0] = 0;
+}

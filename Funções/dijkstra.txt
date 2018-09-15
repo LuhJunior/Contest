@@ -1,0 +1,18 @@
+void dij(int v){
+    int d;
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+    pq.push(make_pair(v,0));
+    while(!pq.empty()){
+        auto ax = pq.top();
+        pq.pop();
+        v = ax.first;
+        d = ax.second;
+        if(dist[v] != -1) continue;
+        //v = dq.front();
+        //dq.pop_front();
+        dist[v] = d;
+        for(int i : g.adj[v])
+            if(dist[i] == -1)
+                pq.push(make_pair(i, d + ed[v][i]));
+    }
+}

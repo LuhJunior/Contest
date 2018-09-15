@@ -1,0 +1,13 @@
+typedef struct {
+    int v;
+    list<int> *adj;
+}graph;
+
+graph g;
+int pre[1000], pos[1000], npre=0, nnpos=0;
+
+void dfs(int v){
+    pre[v] = npre++;
+    for(int i : g.adj[v]) if(pre[i] == -1) dfs(i);
+    pos[v]=nnpos++;
+}

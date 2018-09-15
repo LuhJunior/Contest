@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#define intm intmax_t //strtoimax
 #define lli long long int
 #define fori(x) for(int i=0; i<x; i++)
 #define forj(x) for(int j=0; j<x; j++)
@@ -33,6 +32,7 @@
 #define ads(I) adjacent_difference(I.begin(), I.end(), I.begin())
 #define ad(Begin, End, I) adjacent_difference(Begin, End, I.begin())
 #define accs(I, T) accumulate(I.begin(), I.end(), T)
+#define accsf(I, T, F) accumulate(I.begin(), I.end(), T, F)
 #define acc(begin, end, T) accumulate(begin, end, T)
 #define cifs(I, f) count_if(I.begin(), I.end(), f)
 #define cif(begin, end, f) count_if(begin, end, f)
@@ -52,21 +52,42 @@
 
 using namespace std;
 
-int main() {
-    unsigned lli x;
-    //char s[100];
-    string s;
-    while(1){
-        //fgets(s, 80, stdin);
-        //if(s[0] == '-') break;
-        //x = strtoimax(s, NULL, 10);
-        //printf("%" PRIdMAX "\n", x);
-        //c(x-1*(x != 0));
-        getline(cin, s);
-        if(s == "-1") break;
-        x = stoull(s, nullptr, 10);
-        c(x-1*(x != 0));
+class Te{
+public:
+    Te(int qt = 0, string nome = ""){
+        this->qt = qt;
+        this->nome = nome;
+        if(nome == "suco de laranja") this->v = 120*qt;
+        else if(nome == "morango fresco") this->v = 85*qt;
+        else if(nome == "mamao") this->v = 85*qt;
+        else if(nome == "goiaba vermelha") this->v = 70*qt;
+        else if(nome == "manga") this->v = 56*qt;
+        else if(nome == "laranja") this->v = 50*qt;
+        else if(nome == "brocolis") this->v = 34*qt;
+        else this->v = 0;
     }
+    int v, qt;
+    string nome;
+};
 
+int f(int x, Te x1){return x + x1.v;}
+
+int main() {
+    int n;
+    while(cin>>n && n != 0){
+        int m;
+        string s;
+        vector<Te> v;
+        fori(n){
+            cin>>m;
+            getline(cin, s);
+            s.erase(s.begin());
+            v.pb(Te(m, s));
+        }
+        int x = accsf(v, 0, f);
+        if(x<110) c("Mais "<<110-x<<" mg");
+        else if(x<131) c(x<<" mg");
+        else c("Menos "<<x-130<<" mg");
+    }
 	return 0;
 }

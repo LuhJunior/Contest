@@ -1,0 +1,18 @@
+#define num_moveis 7
+#define peso_max 1000
+vector<pair<int, int>> moveis = {mk(1, 2), mk(2, 4), mk(5, 10), mk(10, 50), mk(20, 40), mk(50, 100), mk(100, 150)};
+int mem_mochila[num_moveis+1][peso_max+1]; // mem[n][v>0] = inf; mem[n][0] = 0
+
+int mochila(int i, int val){
+    if(val<0 || val<moveis[i].first) return 0;
+    if(mem_mochila[i][val] == -1){
+        mem_mochila[i][val] = M(moveis[i].second + mochila(i, val-moveis[i].first), mochila(i+1, val));
+    }
+    return mem_mochila[i][val];
+}
+
+void iniciar_mochila(){
+    form(num_moveis, peso_max) mem_mochila[i][j] = -1;
+    fori(peso_max) mem_mochila[num_moveis][i] = 0;
+    fori(num_moveis) mem_mochila[i][0] = 0;
+}

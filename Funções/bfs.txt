@@ -1,0 +1,15 @@
+void bfs(int v){
+    deque<int> dq;
+    pre[v] = 0;
+    dq.push_back(v);
+    while(!dq.empty()){
+        v = dq.front();
+        dq.pop_front();
+        for(int i : g.adj[v]){
+            if(pre[i] == -1){
+                pre[i] = pre[v] + 1;
+                dq.push_back(i);
+            }
+        }
+    }
+}
